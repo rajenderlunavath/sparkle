@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
+import SlickSlider from "react-slick"; 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./slider.css";
@@ -21,13 +21,13 @@ const ImageSlider = () => {
 
   return (
     <div className="slider-container">
-      <Slider {...settings}>
+      <SlickSlider {...settings}>
         {images.map((src, index) => (
           <div key={index}>
             <img src={src} alt={`Slide ${index}`} className="slider-image" />
           </div>
         ))}
-      </Slider>
+      </SlickSlider>
     </div>
   );
 };
