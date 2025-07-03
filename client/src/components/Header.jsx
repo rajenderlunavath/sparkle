@@ -33,15 +33,15 @@ const Header = () => {
 
   return (
     <header className="bg-sky-100 p-4 shadow-md">
-      <div className="relative max-w-7xl mx-auto flex items-center justify-between flex-wrap">
-        {/* Left menu */}
-        <div className="flex items-center space-x-4">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4">
+        {/* Left Section: Nav */}
+        <div className="flex-1 flex items-center space-x-4 justify-start">
           <Link to="/" className="text-sm sm:text-base font-medium text-gray-700 hover:text-blue-700">Home</Link>
           <Link to="/shop" className="text-sm sm:text-base font-medium text-gray-700 hover:text-blue-700">Shop</Link>
         </div>
 
         {/* Center logo */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
+        <div className="flex-1 justify-center">
           <Link to="/">
             <img
              src={logo}
