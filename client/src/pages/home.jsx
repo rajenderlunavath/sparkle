@@ -6,16 +6,11 @@ import ImageSlider from "../components/Slider";
 const Home = () => {
   return (
     <>
-      <Header />
-
-      <section id="home">
-        <ImageSlider />
-      </section>
 
       <section
         id="about"
         style={{
-          height: '100vh',
+          height: '70vh',
           padding: '4rem',
           backgroundImage: `url('/images/banner2.jpg')`, // <-- update path
           backgroundSize: 'cover',
@@ -24,6 +19,7 @@ const Home = () => {
           color: 'white',
         }}
       >
+
         {/* Overlay */}
         <div
           style={{
@@ -39,15 +35,17 @@ const Home = () => {
 
         {/* Content */}
         <div style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
-          <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>About Sparkle</h2>
+          <h2 style={{ fontSize: '3rem', marginBottom: '1rem', color: 'white' }}>About Sparkle PVD</h2>
           <p style={{ maxWidth: '800px', fontSize: '1.2rem', margin: '0 auto' }}>
-            Sparkle is your go-to destination for quality products delivered with care.
+            Sparkle PVD is your go-to destination for quality products delivered with care.
             Our brand represents trust, trend, and tech — we bring you products that brighten your lifestyle.
           </p>
         </div>
       </section>
 
-      <Footer />
+      <section id="home" style={{ height: '60vh', overflow: 'hidden' }}>
+        <ImageSlider />
+      </section>
     </>
   );
 };
