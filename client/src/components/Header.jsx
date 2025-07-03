@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { auth, provider } from "../services/firebase";
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
+import logo from "../assets/logo.png";
 import "./header.css";
 
 const Header = () => {
@@ -32,7 +33,7 @@ const Header = () => {
 
   return (
     <header className="bg-sky-100 p-4 shadow-md">
-      <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap">
+      <div className="relative max-w-7xl mx-auto flex items-center justify-between flex-wrap">
         {/* Left menu */}
         <div className="flex items-center space-x-4">
           <Link to="/" className="text-sm sm:text-base font-medium text-gray-700 hover:text-blue-700">Home</Link>
@@ -40,8 +41,14 @@ const Header = () => {
         </div>
 
         {/* Center logo */}
-        <div className="w-full sm:w-auto text-center sm:flex-1 sm:text-center">
-          <Link to="/" className="text-xl sm:text-2xl font-bold text-blue-900">Sparkle PVD</Link>
+        <div className="absolute left-1/2 transform -translate-x-1/2">
+          <Link to="/">
+            <img
+             src={logo}
+             alt="Sparkle PVD Logo"
+             className="max-h-16 w-auto object-contain"
+            />
+          </Link>
         </div>
 
         {/* Right auth buttons */}
