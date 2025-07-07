@@ -55,7 +55,6 @@ const Header = () => {
 
         {/* Right: Desktop nav */}
         <nav className="hidden sm:flex items-center space-x-5">
-          <Link to="/" className="text-gray-700 hover:text-blue-700 text-sm sm:text-base">Home</Link>
           <Link to="/shop" className="text-gray-700 hover:text-blue-700 text-sm sm:text-base">Shop</Link>
           {!user ? (
             <button
